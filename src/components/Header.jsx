@@ -82,15 +82,15 @@ export default function Header() {
 
       {/* Mobile Menu Button */}
 
-      {/*<div className=" sm:hidden lg:hidden flex items-center justify-center ">
+      <div className=" sm:hidden lg:hidden flex items-center justify-center ">
         <button onClick={toggleMobileMenu} className="text-white text-2xl">
           {isMobileMenuOpen ? "" : <FaBars />}
         </button>
-      </div>*/}
+      </div>
 
       {/* Mobile Menu */}
 
-      {/*{isMobileMenuOpen && (
+      {isMobileMenuOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-90 z-20 flex flex-col items-center justify-center space-y-8">
           <div className="lg:hidden">
             <button onClick={toggleMobileMenu} className="text-white text-2xl">
@@ -130,13 +130,13 @@ export default function Header() {
             Login
           </Link>
         </div>
-      )}*/}
+      )}
 
       {/* Desktop Menu */}
 
       {/*<nav className="hidden lg:font-medium lg:flex flex-grow justify-center space-x-8 lg:space-x-44 px-5"> */}
 
-      <nav className=" font-medium  lg:font-medium lg:flex flex-grow justify-center space-x-6 lg:space-x-44 sm:space-x-16 lg:px-7 sm:px-5 pr-8">
+      <nav className=" hidden font-medium  lg:font-medium sm:flex lg:flex flex-grow justify-center space-x-6 lg:space-x-44 sm:space-x-16 lg:px-7 sm:pl-0 sm:pr-9 pr-8">
         <Link
           to="/"
           className="text-white text-[16px] sm:text-2xl lg:text-3xl hover:text-[#FFCD29]"
