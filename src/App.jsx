@@ -6,6 +6,7 @@ import Meals from "./pages/Meals";
 import Nutrition from "./pages/Nutrition";
 import Login from "./pages/Login";
 import Footer from "./components/Footer";
+import SignUp from "./SignUp";
 
 export default function App() {
   return (
@@ -15,7 +16,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/meals" element={<Meals />} />
         <Route path="/nutrition" element={<Nutrition />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<SignUp />} />
       </Routes>
       <Footer />
     </Router>
