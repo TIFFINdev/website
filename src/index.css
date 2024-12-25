@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+/* *{
  padding: 0;
  margin: 0;
 }
@@ -19,4 +19,4 @@ header{
 
 main{
     flex: 0 1 auto;
-}
+} */

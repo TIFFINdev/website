@@ -1,24 +1,20 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Home from "./pages/Home";
-import Meals from "./pages/Meals";
-import Nutrition from "./pages/Nutrition";
-import Login from "./pages/Login";
-import Footer from "./components/Footer";
-import SignUp from "./SignUp";
+import React from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import BringToCity from './components/BringToCity';
+import Download from './components/Download';
+import Footer from './components/Footer';
 
-export default function App() {
+function App() {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/meals" element={<Meals />} />
-        <Route path="/nutrition" element={<Nutrition />} />
-        <Route path="/login" element={<SignUp />} />
-      </Routes>
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      <Hero />
+      <BringToCity />
+      <Download />
       <Footer />
-    </Router>
+    </div>
   );
 }
+
+export default App;
