@@ -1,33 +1,14 @@
-import React, { useState } from 'react';
-import { MapPin } from 'lucide-react';
+import React, { useState } from "react";
+import { MapPin } from "lucide-react";
 
 const Hero = () => {
-  const [location, setLocation] = useState('');
-  const [deliveryType, setDeliveryType] = useState('delivery');
+  const [location, setLocation] = useState("");
+  const [deliveryType, setDeliveryType] = useState("delivery");
 
   return (
-    <div className="flex items-center justify-between mb-10">
+    <div className="flex items-center justify-between ">
       <div className="relative w-1/2">
-        <img
-          src='/VisualImage.png'
-          alt='Visual Sample'
-          className=''
-        />
-        {/* <img 
-          src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=500"
-          alt="Healthy meal"
-          className="rounded-full w-[400px] h-[400px] object-cover"
-        />
-        <img 
-          src="https://images.unsplash.com/photo-1587735243615-c03f25aaff15?auto=format&fit=crop&q=80&w=100"
-          alt="Lemon"
-          className="absolute top-0 right-0 w-24 h-24 object-cover"
-        />
-        <img 
-          src="https://images.unsplash.com/photo-1606923829579-0cb981a83e2e?auto=format&fit=crop&q=80&w=100"
-          alt="Tomatoes"
-          className="absolute bottom-0 left-0 w-24 h-24 object-cover"
-        /> */}
+        <img src='/VisualImage.png' alt='Visual Sample' className='' />
       </div>
 
       <div className="w-1/2 px-10">
@@ -97,6 +78,5 @@ const TimeBox = ({ label, value }) => (
     <span className="text-sm">{label}</span>
   </div>
 );
-
 
 export default Hero;
