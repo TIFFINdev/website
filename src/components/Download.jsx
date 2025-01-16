@@ -4,7 +4,7 @@ const Download = () => {
   return (
     <div className="flex items-center justify-between px-28 py-12">
       <div className=" w-1/2">
-        <h2 className="text-5xl font-bold mb-4">
+        <h2 className="text-4xl font-bold mb-4">
           Download to use effectively!!
         </h2>
         <div className="flex pt-8 gap-16">
@@ -12,12 +12,12 @@ const Download = () => {
             <img
               src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
               alt="Get it on Google Play"
-              className="h-36"
+              className="h-32"
             />
             <img
               src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"
               alt="Download on App Store"
-              className="h-24  w-[125%]"
+              className="h-20  w-[115%]"
             />
           </div>
           <div className=" flex w-40 h-52 pt-12 ">

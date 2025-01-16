@@ -27,11 +27,11 @@ const Hero = () => {
       </div>
 
       <div className="w-1/2 pt-4">
-        <h1 className="text-8xl text-right font-bold mb-12 px-10">
+        <h1 className="text-7xl text-right font-bold mb-12 px-10">
           Customize your
           <br /> own Diet
         </h1>
-        <p className="text-gray-500 text-3xl text-right px-10 font-bold mb-8">
+        <p className="text-gray-500 text-2xl text-right px-10 font-bold mb-8">
           Tiffin Your AI-Powered Meal solution
         </p>
 
@@ -39,7 +39,7 @@ const Hero = () => {
           <div className="bg-gray-200 rounded-lg p-6  shadow-lg">
             <div className="flex gap-0 mb-6 justify-center">
               <button
-                className={`px-12 py-4 text-2xl rounded-lg ${
+                className={`px-12 py-4 text-xl rounded-lg ${
                   deliveryType === "delivery"
                     ? "bg-purple-100 text-purple-700"
                     : "bg-gray-100"
@@ -49,7 +49,7 @@ const Hero = () => {
                 🛵 Delivery
               </button>
               <button
-                className={`px-12 py-4 text-2xl rounded-lg ${
+                className={`px-12 py-4 text-xl rounded-lg ${
                   deliveryType === "pickup"
                     ? "bg-purple-100 text-purple-700"
                     : "bg-gray-100"
@@ -61,22 +61,22 @@ const Hero = () => {
             </div>
 
             <div className="relative">
-              <MapPin className="absolute left-2 h-12 top-2 text-gray-400" />
+              <MapPin className="absolute left-2 h-10 top-2 text-gray-400" />
               <input
                 type="text"
                 placeholder="Enter Your Location"
-                className="w-full pl-10 pr-4 py-4 text-2xl border rounded-lg"
+                className="w-full pl-10 pr-4 py-4 text-xl border rounded-lg"
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
               />
-              <button className="absolute  right-1 bg-purple-600 text-white px-4 py-4 text-2xl rounded-lg">
+              <button className="absolute  right-1 bg-purple-600 text-white px-4 py-4 text-xl rounded-lg">
                 Check Availability
               </button>
             </div>
           </div>
         </div>
 
-        <div className="mt-8 text-2xl bg-yellow-200 rounded-tl-full justify-end  flex items-stretch ml-0 ">
+        <div className="mt-8 text-xl bg-yellow-200 rounded-tl-full justify-end  flex items-stretch ml-0 ">
           <div className=" px-5 py-5 flex h-auto flex-col items-center justify-center ">
             <p className="mb-1  text-center text-black font-medium">
               Please wait
@@ -87,11 +87,11 @@ const Hero = () => {
           </div>
           <div className="flex  rounded-l-[36px]  items-center w-2/3 bg-yellow-400 justify-center gap-8 text-black  ml-6">
             <TimeBox label="days" value="27" />
-            <span className="text-3xl">:</span>
+            <span className="text-2xl">:</span>
             <TimeBox label="hours" value="14" />
-            <span className="text-3xl">:</span>
+            <span className="text-2xl">:</span>
             <TimeBox label="minutes" value="09" />
-            <span className="text-3xl">:</span>
+            <span className="text-2xl">:</span>
             <TimeBox label="seconds" value="59" />
           </div>
         </div>
