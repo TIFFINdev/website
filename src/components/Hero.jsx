@@ -6,24 +6,24 @@ const Hero = () => {
   const [deliveryType, setDeliveryType] = useState("delivery");
 
   return (
-    <div className="flex items-center justify-between ">
+    <div className="flex items-end justify-between ">
       <div className="relative w-1/2">
         <img src="/VisualImage.png" alt="Visual Sample" className="" />
       </div>
 
       <div className="w-1/2 px-10">
-        <h1 className="text-6xl text-right font-bold mb-4">
+        <h1 className="text-7xl text-right font-bold mb-8">
           Customize your
           <br /> own Diet
         </h1>
-        <p className="text-gray-500 text-right font-bold mb-8">
+        <p className="text-gray-500 text-xl text-right font-bold mb-12">
           Tiffin Your AI-Powered Meal solution
         </p>
 
-        <div className="bg-gray-200 rounded-lg p-6 shadow-lg">
-          <div className="flex gap-4 mb-4 justify-center">
+        <div className="bg-gray-200 rounded-2xl p-6 shadow-lg mb-16">
+          <div className="flex text-2xl mb-8 mt-4 justify-center">
             <button
-              className={`px-4 py-2 rounded-lg ${
+              className={`px-14 py-2 rounded-lg ${
                 deliveryType === "delivery"
                   ? "bg-purple-100 text-purple-700"
                   : "bg-gray-100"
@@ -33,7 +33,7 @@ const Hero = () => {
               🛵 Delivery
             </button>
             <button
-              className={`px-4 py-2 rounded-lg ${
+              className={`px-14 py-2 rounded-lg ${
                 deliveryType === "pickup"
                   ? "bg-purple-100 text-purple-700"
                   : "bg-gray-100"
@@ -44,16 +44,16 @@ const Hero = () => {
             </button>
           </div>
 
-          <div className="relative">
-            <MapPin className="absolute left-2 top-2 text-gray-400" />
+          <div className="relative text-xl mb-6 mx-4">
+            <MapPin className="absolute left-2 top-4 text-gray-400" />
             <input
               type="text"
               placeholder="Enter Your Location"
-              className="w-full pl-10 pr-4 py-2 border rounded-lg"
+              className="w-full pl-10 pr-4 py-3 border rounded-lg"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
             />
-            <button className="absolute top-1 right-1 bg-purple-600 text-white px-4 py-1 rounded-lg">
+            <button className="absolute top-0 right-0 bg-purple-600 text-white px-4 py-3 rounded-lg">
               Check Availability
             </button>
           </div>
