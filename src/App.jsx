@@ -8,7 +8,12 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="h-screen flex flex-col">
+      <div className="h-screen flex flex-col" style={{
+        backgroundImage: `url('/GROUP150.png')`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center top -75px",
+      }}>
         <Navbar />
         <div className="flex-1">
           <Hero />

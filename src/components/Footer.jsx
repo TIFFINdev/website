@@ -1,94 +1,101 @@
-import React from "react";
-import { Instagram, Twitter, Youtube, Facebook, Linkedin } from "lucide-react";
-import { BsTelegram } from "react-icons/bs";
-import { FaChevronDown } from "react-icons/fa";
+import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className=" ">
-      <div className="px-8 py-12 grid grid-cols-5 gap-8 mb-8">
+    <footer className="bg-gray-50 text-black pt-10">
+      <div className="container mx-auto px-20 grid grid-cols-2 md:grid-cols-5 gap-10">
+        {/* About Us Section */}
         <div>
-          <h3 className="font-semibold mb-4 text-2xl">ABOUT US</h3>
-          <p>Learn More About us...</p>
+          <h4 className="text-lg font-bold mb-5">ABOUT US</h4>
+          <img src="/logo2.png" alt="" className='w-[80px] rounded-xl mb-2' />
+          <p className="text-gray-600">Learn More About us.</p>
         </div>
 
+        {/* Services Section */}
         <div>
-          <h3 className="font-semibold mb-4 text-2xl">SERVICES</h3>
-          <ul className="space-y-2">
+          <h4 className="text-lg font-bold mb-5">SERVICES</h4>
+          <ul className="text-gray-600 space-y-1">
             <li>Meal Plans</li>
             <li>Nutrition Tracking</li>
             <li>Goal Setting</li>
-            <li>Subscription Planning</li>
+            <li>Subscriptions Planning</li>
           </ul>
         </div>
 
+        {/* Contact Us Section */}
         <div>
-          <h3 className="font-semibold mb-4 text-2xl">CONTACT US</h3>
-          <p>+91 98765 43678</p>
-          <p>support@tiffindiet.in</p>
+          <h4 className="text-lg font-bold mb-5">CONTACT US</h4>
+          <p className="text-gray-600">+91 98765 45678</p>
+          <p className="text-gray-600">
+            <a href="mailto:support@tiffinindia.in" className="hover:text-black">
+              support@tiffinindia.in
+            </a>
+          </p>
         </div>
 
+        {/* Legals Section */}
         <div>
-          <h3 className="font-semibold mb-4 text-2xl">LEGALS</h3>
-          <ul className="space-y-2">
+          <h4 className="text-lg font-bold mb-5">LEGALS</h4>
+          <ul className="text-gray-600 space-y-1">
             <li>Privacy Policy</li>
             <li>Food Policy</li>
             <li>Terms and Conditions</li>
           </ul>
         </div>
-        <div>
-          <p className="text-2xl">Social Links</p>
-          <div className="flex justify-between items-center py-8 ">
-            <div className="flex gap-4">
-              <div className="bg-black rounded-3xl h-9 w-9 flex items-center justify-center ">
-                <Instagram className="w-6 h-6 cursor-pointer text-white " />
-              </div>
-              <div className="bg-black rounded-3xl h-9 w-9 flex items-center justify-center ">
-                <Twitter className="w-6 h-6 cursor-pointer text-white fill-white " />
-              </div>
 
-              <BsTelegram className="w-9 h-9 cursor-pointer  " />
+        {/* Social Links and App Download */}
+        {/* Social Links and App Download */}
+        <div className="flex flex-col items-center justify-center">
+          <h4 className="text-lg font-bold mb-5">Social Links</h4>
+          <div className="flex space-x-3 mb-4">
+            <a href="#" className="text-xl"><i className="fab fa-instagram"></i></a>
+            <a href="#" className="text-xl"><i className="fab fa-twitter"></i></a>
+            <a href="#" className="text-xl"><i className="fab fa-telegram"></i></a>
+            <a href="#" className="text-xl"><i className="fab fa-youtube"></i></a>
+            <a href="#" className="text-xl"><i className="fab fa-linkedin"></i></a>
+          </div>
 
-              <div className="bg-black rounded-3xl h-9 w-9 flex items-center justify-center ">
-                <Youtube className="w-6 h-6 cursor-pointer text-white " />
-              </div>
-              <div className="bg-black rounded-3xl h-9 w-9 flex items-center justify-center ">
-                <Linkedin className="w-6 h-6 cursor-pointer text-white " />
-              </div>
+          <h4 className="text-lg font-bold mb-2">For Better Experience</h4>
+          <div className="flex flex-col items-center justify-center gap-5 w-full">
+            <a href="#">
+              <img
+                src="/playstore.png"
+                alt="Google Play"
+                className="w-[70%] object-contain mx-auto"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="/applestore.png"
+                alt="App Store"
+                className="w-[70%] object-contain mx-auto"
+              />
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div className="bg-yellow-400 text-black py-8 px-8 mt-10">
+        <div className="container mx-auto px-4 flex justify-between">
+          <p className="text-sm">
+            By continuing past this page, you agree to our Terms of Service, Cookie Policy, and Content Policies.
+            All trademarks are properties of respective owners 2024.
+          </p>
+          <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-1">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png"
+                alt="India Flag"
+                className="h-4"
+              />
+              <p>India</p>
+            </div>
+            <div className="flex items-center space-x-1 gap-5">
+              <i className="fas fa-globe"></i>
+              <p>English</p>
             </div>
           </div>
-          <span className="text-2xl">For Better Experience</span>
-          <div className="flex items-center py-8 gap-4">
-            <img
-              src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-              alt="Get it on Google Play"
-              className="h-11"
-            />
-            <img
-              src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"
-              alt="Download on App Store"
-              className="h-8"
-            />
-          </div>
-        </div>
-      </div>
-      <div className="flex w-screen items-center gap-4 justify-between pl-8 pr-28 py-6 bg-yellow-400">
-        <div>
-          <p>
-            By continuing past this page, you agree to or Terms of Service,
-            Cookie Policy and Content Policies. All trademarks are properties of
-            respective owners 2024.
-            <br />
-            2024 Tiffin Ltd. All rights reserved
-          </p>
-        </div>
-        <div className="flex gap-12">
-          <button className="flex bg-white  shadow-2xl shadow-black font-semibold items-center gap-2 px-4 py-2 border rounded">
-            🌍 India <FaChevronDown />
-          </button>
-          <button className="flex  bg-white  shadow-2xl shadow-slate-950 font-semibold items-center gap-2 px-4 py-2 border rounded">
-            🌐 English <FaChevronDown />
-          </button>
         </div>
       </div>
     </footer>
