@@ -15,9 +15,9 @@ const Hero = () => {
         />
       </div>
 
-      <div className="w-1/2  flex flex-col items-stretch justify-center space-y-24">
+      <div className="w-1/2  flex flex-col items-stretch justify-center">
         <div>
-          <h1 className="text-[5rem] pr-10 text-right font-bold mb-8">
+          <h1 className="text-[60px] pr-10 text-right font-bold mb-8">
             Customize your
             <br /> own Diet
           </h1>
@@ -26,8 +26,8 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="bg-gray-200 mr-10 rounded-2xl p-6 shadow-lg mb-16">
-          <div className="flex text-2xl mb-12 mt-4 justify-center">
+        <div className="bg-gray-200 mr-10 rounded-2xl p-6 shadow-lg mb-10">
+          <div className="flex text-xl mb-12 mt-4 justify-center">
             <button
               className={`px-14 py-3 rounded-lg ${
                 deliveryType === "delivery"
@@ -50,7 +50,7 @@ const Hero = () => {
             </button>
           </div>
 
-          <div className="relative text-xl mb-6 mx-4">
+          <div className="relative text-lg mb-2 mx-4">
             <MapPin className="absolute left-2 top-4 text-gray-400" />
             <input
               type="text"
@@ -64,17 +64,16 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        <div className="mt-8 h-40 min-w-full text-2xl  rounded-tl-full  "></div>
-        <div className="mt-8 absolute bottom-[-17px] right-0 w-2/3 text-2xl bg-yellow-200 rounded-tl-full justify-end  flex items-stretch ml-0 ">
-          <div className="  px-4 py-12 flex h-auto flex-col items-center justify-center ">
-            <p className="mb-1  text-center text-black font-medium">
+        <div className=" text-[15px] bg-yellow-200 rounded-tl-full justify-end  flex items-stretch">
+          <div className="  px-4 py-5 flex h-auto flex-col items-center justify-center ">
+            <p className="mb-1 text-center text-black font-medium">
               Please wait
             </p>
             <p className="text-center  text-black font-medium">
               Cooking Takes Time!!
             </p>
           </div>
-          <div className="flex  rounded-l-[36px]  items-center w-2/3 bg-yellow-400 justify-center gap-8 text-black  ml-2 py-7">
+          <div className="flex  rounded-l-[36px]  items-center w-[83%] bg-yellow-400 justify-center gap-8 text-black  ml-2">
             <TimeBox label="days" value="27" />
             <span className="text-4xl">:</span>
             <TimeBox label="hours" value="14" />
@@ -91,7 +90,7 @@ const Hero = () => {
 
 const TimeBox = ({ label, value }) => (
   <div className="flex flex-col items-center">
-    <span className="text-6xl">{value}</span>
+    <span className="text-3xl">{value}</span>
     <span className="text-lg">{label}</span>
   </div>
 );
