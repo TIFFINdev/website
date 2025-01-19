@@ -1,8 +1,49 @@
 import React, { useState, useEffect } from "react";
 import { MapPin } from "lucide-react";
+import { ToastContainer, toast } from 'react-toastify';
+
 
 const Hero = () => {
   const [location, setLocation] = useState("");
+  const availableCities_delivery = [];
+  const availableCities_pickup = [];
+  const checkAvailability = () => {
+    if (location.trim() === "") {
+      // Input is empty
+      toast.error("Input cannot be empty!", {
+        position: "top-center",
+      });
+    }
+    else {
+      if (deliveryType == "delivery") {
+        if (availableCities_delivery.includes(location.toLowerCase())) {
+          // City is in the available cities array
+          toast.success(`Wow, We are delivering in ${location.toLowerCase()}!`, {
+            position: "top-center",
+          });
+        } else {
+          // City is not in the array
+          toast.error(`Sorry, we are not available in ${location.toLowerCase()}!`, {
+            position: "top-center",
+          });
+        }
+      }
+      else {
+        if (availableCities_pickup.includes(location.toLowerCase())) {
+          // City is in the available cities array
+          toast.success(`We provide pickup in ${location.toLowerCase()}!`, {
+            position: "top-center",
+          });
+        } else {
+          // City is not in the array
+          toast.error(`Sorry, we are not available in ${location.toLowerCase()}!`, {
+            position: "top-center",
+          });
+        }
+      }
+    }
+  };
+
   const [deliveryType, setDeliveryType] = useState("delivery");
   const targetDate = new Date("2025-04-26T00:00:00"); // Example target date
 
@@ -95,7 +136,10 @@ const Hero = () => {
               value={location}
               onChange={(e) => setLocation(e.target.value)}
             />
-            <button className="absolute top-0 right-0 bg-purple-600 text-white px-4 py-3 rounded-lg">
+            <button
+              onClick={checkAvailability} // Call the function on click
+              className="absolute top-0 right-0 bg-purple-600 text-white px-4 py-3 rounded-lg"
+            >
               Check Availability
             </button>
           </div>
@@ -122,6 +166,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
