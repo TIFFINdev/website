@@ -18,12 +18,12 @@ const Hero = () => {
       if (deliveryType == "delivery") {
         if (availableCities_delivery.includes(location.toLowerCase())) {
           // City is in the available cities array
-          toast.success(`Wow, We are delivering in ${location.toLowerCase()}!`, {
+          toast.success(`Hey, We are delivering in ${location.toLowerCase()}!`, {
             position: "top-center",
           });
         } else {
           // City is not in the array
-          toast.error(`Sorry, we are not available in ${location.toLowerCase()}!`, {
+          toast.error(`Sorry, we are not delivering in ${location.toLowerCase()}!`, {
             position: "top-center",
           });
         }
