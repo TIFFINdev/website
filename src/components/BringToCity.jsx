@@ -57,8 +57,8 @@ const BringToCity = () => {
         <h2 className="text-5xl font-bold mb-5 ">
           Bring <span className="text-yellow-400">TIFFIN</span> to Your City
         </h2>
-        <p className="text-gray-600 mb-10 text-[22px]">
-          Register below to show interest in our work and share feedback
+        <p className="text-gray-700 mb-10 text-[22px]">
+          Register below to show interest in our work on scale of 5
         </p>
 
         <div className="flex gap-12 mb-10 ">
@@ -73,7 +73,7 @@ const BringToCity = () => {
           ))}
         </div>
 
-        <p className="text-gray-600 mb-6 text-[22px]">
+        <p className="text-gray-500 mb-6 text-[18px]">
           Kindly take a moment to tell us what are your expectations
         </p>
 
