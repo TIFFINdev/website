@@ -55,7 +55,9 @@ const Footer = () => {
             <a href="#" className="text-xl"><i className="fab fa-linkedin"></i></a>
           </div>
 
-          <h4 className="text-lg font-bold mb-2">For Better Experience</h4>
+          {/* <h4 className="text-lg font-bold mb-2">For Better Experience</h4> */}
+          <h4 className="text-lg font-bold mb-2">Dropping soon on</h4>
+
           <div className="flex flex-col items-center justify-center gap-5 w-full">
             <a href="#">
               <img
