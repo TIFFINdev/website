@@ -2,12 +2,16 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-50 text-black pt-10">
-      <div className="container mx-auto px-20 grid grid-cols-2 md:grid-cols-5 gap-10">
+    <footer className="bg-gray-50 text-black pt-10 sm:mb-0 mb-[160px]">
+      <div className="container mx-auto px-6 md:px-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
         {/* About Us Section */}
         <div>
           <h4 className="text-lg font-bold mb-5">ABOUT US</h4>
-          <img src="/logo2.png" alt="" className='w-[80px] rounded-xl mb-2' />
+          <img
+            src="/logo2.png"
+            alt="Logo"
+            className="w-[80px] rounded-xl mb-2"
+          />
           <p className="text-gray-600">Learn More About us.</p>
         </div>
 
@@ -27,7 +31,10 @@ const Footer = () => {
           <h4 className="text-lg font-bold mb-5">CONTACT US</h4>
           <p className="text-gray-600">+91 98765 45678</p>
           <p className="text-gray-600">
-            <a href="mailto:support@tiffinindia.in" className="hover:text-black">
+            <a
+              href="mailto:support@tiffinindia.in"
+              className="hover:text-black"
+            >
               support@tiffinindia.in
             </a>
           </p>
@@ -44,20 +51,27 @@ const Footer = () => {
         </div>
 
         {/* Social Links and App Download */}
-        {/* Social Links and App Download */}
         <div className="flex flex-col items-center justify-center">
           <h4 className="text-lg font-bold mb-5">Social Links</h4>
           <div className="flex space-x-3 mb-4">
-            <a href="#" className="text-xl"><i className="fab fa-instagram"></i></a>
-            <a href="#" className="text-xl"><i className="fab fa-twitter"></i></a>
-            <a href="#" className="text-xl"><i className="fab fa-telegram"></i></a>
-            <a href="#" className="text-xl"><i className="fab fa-youtube"></i></a>
-            <a href="#" className="text-xl"><i className="fab fa-linkedin"></i></a>
+            <a href="#" className="text-xl">
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a href="#" className="text-xl">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="#" className="text-xl">
+              <i className="fab fa-telegram"></i>
+            </a>
+            <a href="#" className="text-xl">
+              <i className="fab fa-youtube"></i>
+            </a>
+            <a href="#" className="text-xl">
+              <i className="fab fa-linkedin"></i>
+            </a>
           </div>
 
-          {/* <h4 className="text-lg font-bold mb-2">For Better Experience</h4> */}
           <h4 className="text-lg font-bold mb-2">Dropping soon on</h4>
-
           <div className="flex flex-col items-center justify-center gap-5 w-full">
             <a href="#">
               <img
@@ -75,16 +89,16 @@ const Footer = () => {
             </a>
           </div>
         </div>
-
       </div>
 
-      <div className="bg-yellow-400 text-black py-8 px-8 mt-10">
-        <div className="container mx-auto px-4 flex justify-between">
-          <p className="text-sm">
-            By continuing past this page, you agree to our Terms of Service, Cookie Policy, and Content Policies.
-            All trademarks are properties of respective owners 2024.
+      <div className="sm:bg-yellow-400 bg-yellow-200 text-black py-8 px-4 md:px-8 mt-20">
+        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+          <p className="text-sm text-center md:text-left mb-4 md:mb-0">
+            By continuing past this page, you agree to our Terms of Service,
+            Cookie Policy, and Content Policies. All trademarks are properties
+            of respective owners 2024.
           </p>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-1">
               <img
                 src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png"
@@ -93,7 +107,7 @@ const Footer = () => {
               />
               <p>India</p>
             </div>
-            <div className="flex items-center space-x-1 gap-5">
+            <div className="flex items-center space-x-1">
               <i className="fas fa-globe"></i>
               <p>English</p>
             </div>

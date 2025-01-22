@@ -12,7 +12,7 @@ function App() {
         backgroundImage: `url('/GROUP150.png')`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center top -75px",
+        backgroundPosition: "center top -70px",
       }}>
         <Navbar />
         <div className="flex-1">
