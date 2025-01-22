@@ -5,7 +5,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between px-6 lg:px-12 py-3">
+    <nav className="flex items-center justify-between px-6 lg:px-12 py-3 relative z-50">
       {/* Logo */}
       <img src="/logo.png" className="h-12 lg:h-16" alt="Logo" />
 

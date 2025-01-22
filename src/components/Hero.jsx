@@ -122,14 +122,14 @@ const Hero = () => {
             <MapPin className="absolute left-2 top-4 text-gray-400" />
             <input
               type="text"
-              placeholder="Enter Your Location"
+              placeholder="Your Location"
               className="w-full pl-10 pr-24 sm:pr-32 py-3 border rounded-lg"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
             />
             <button
               onClick={checkAvailability}
-              className="absolute top-0 right-0 bg-purple-600 text-white px-2 sm:px-4 py-3 rounded-lg text-sm sm:text-base"
+              className="absolute top-[3px] right-0 bg-purple-600 text-white px-2 sm:px-4 py-3 rounded-lg text-sm sm:text-base"
             >
               Check Availability
             </button>
