@@ -129,7 +129,7 @@ const Hero = () => {
             />
             <button
               onClick={checkAvailability}
-              className="absolute top-[3px] right-[2px] bg-purple-600 text-white px-2 sm:px-4 py-3 rounded-lg text-sm sm:text-base"
+              className="absolute top-[3px] right-[3px] bg-purple-600 text-white px-2 sm:px-4 py-3 rounded-lg text-sm sm:text-base"
             >
               Check Availability
             </button>
