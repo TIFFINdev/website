@@ -46,7 +46,7 @@ const BringToCity = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between px-4 lg:px-8 lg:py-12 lg:pt-20">
+    <div className="flex flex-col lg:flex-row items-center justify-between px-4 lg:px-8 lg:py-12 lg:pt-20 lg:mt-0 mt-15">
       {/* Animation Section */}
       <div className="w-full lg:w-[55%] mb-10 lg:mb-0 flex items-center justify-center lg:justify-between">
         <Animation />
