@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+      { "source": "/certificate/:id", "destination": "/index.html" }
+    ]
+  }
+  
