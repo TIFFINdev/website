@@ -30,7 +30,7 @@ const CertificateViewer = () => {
             role: "UI/UX Designer",
             period: "Two months",
             description: "Completed a two-month internship as a UI/UX Designer at TIFFIN.",
-            issueDate: "2024",
+            issueDate: "2025",
             image: "/certificates/TIFF20240608IN0000012.png"
         },
         'TIFF20240608IN0000013': {
@@ -38,7 +38,7 @@ const CertificateViewer = () => {
             role: "UI/UX Designer",
             period: "Two months",
             description: "Completed a two-month internship as a UI/UX Designer at TIFFIN.",
-            issueDate: "2024",
+            issueDate: "2025",
             image: "/certificates/TIFF20240608IN0000013.png"
         },
         'TIFF20240608IN0000014': {
@@ -46,7 +46,7 @@ const CertificateViewer = () => {
             role: "Data Analytics Intern",
             period: "Two months",
             description: "Completed a two-month internship in the Data Analytics department at TIFFIN.",
-            issueDate: "2024",
+            issueDate: "2025",
             image: "/certificates/TIFF20240608IN0000014.png"
         },
         'TIFF20240608IN0000015': {
@@ -54,7 +54,7 @@ const CertificateViewer = () => {
             role: "Data Analytics Intern",
             period: "Two months",
             description: "Completed a two-month internship in the Data Analytics department at TIFFIN.",
-            issueDate: "2024",
+            issueDate: "2025",
             image: "/certificates/TIFF20240608IN0000015.png"
         },
         'TIFF20240608IN0000016': {
@@ -62,7 +62,7 @@ const CertificateViewer = () => {
             role: "Web Developer",
             period: "Two months",
             description: "Completed a two-month internship as a Web Developer at TIFFIN.",
-            issueDate: "2024",
+            issueDate: "2025",
             image: "/certificates/TIFF20240608IN0000016.png"
         },
         'TIFF20240608IN0000017': {
@@ -70,7 +70,7 @@ const CertificateViewer = () => {
             role: "Web Developer",
             period: "Two months",
             description: "Completed a two-month internship as a Web Developer at TIFFIN.",
-            issueDate: "2024",
+            issueDate: "2025",
             image: "/certificates/TIFF20240608IN0000017.png"
         },
         'TIFF20240608IN0000003': {
