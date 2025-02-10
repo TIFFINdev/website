@@ -26,16 +26,16 @@ const Navbar = () => {
         <Link to="/" className="hover:text-gray-700 font-medium">
           Home
         </Link>
-        <Link to="#" className="hover:text-gray-700">
+        <Link to="/" className="hover:text-gray-700">
           Download
         </Link>
-        <Link to="#" className="hover:text-gray-700">
+        <Link to="/" className="hover:text-gray-700">
           About Us
         </Link>
         <Link to="/certificates" className="hover:text-gray-700">
           Certificates
         </Link>
-        <Link to="#" className="hover:text-gray-700">
+        <Link to="/" className="hover:text-gray-700">
           <User className="w-5 h-5 inline-block mr-2" />
           Account
         </Link>
@@ -52,14 +52,14 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            to="#"
+            to="/"
             className="text-gray-700 hover:text-gray-900"
             onClick={() => setIsMenuOpen(false)}
           >
             Download
           </Link>
           <Link
-            to="#"
+            to="/"
             className="text-gray-700 hover:text-gray-900"
             onClick={() => setIsMenuOpen(false)}
           >
