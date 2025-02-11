@@ -1,153 +1,53 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Award, XCircle, Download, Share2, CheckCircle } from 'lucide-react';
 import jsPDF from 'jspdf';
+// import React, {  } from "react";
+import axios from "axios";
+
+
+
 
 const CertificateViewer = () => {
+
+    const [certificatesDb, setCertificatesDb] = useState({});
+    const [loading, setLoading] = useState(true); // Loading state
+
+    useEffect(() => {
+        axios
+            .get("https://admin-tiffin.onrender.com/get_all_employees")
+            .then((response) => {
+                const formattedData = response.data.reduce((acc, emp) => {
+                    acc[emp.intern_id] = {
+                        name: emp.name,
+                        role: emp.post || "Intern",
+                        period: emp.duration === "NA" ? "Two months" : emp.duration,
+                        description: emp.text,
+                        issueDate: "2025", // Modify if issue date is available
+                        image: emp.certificate_link, // Assuming this is the certificate image link
+                    };
+                    return acc;
+                }, {});
+
+                setCertificatesDb(formattedData);
+                setLoading(false); // Set loading to false after data is fetched
+            })
+            .catch((error) => {
+                console.error("Error fetching data:", error);
+                setLoading(false); // Even on error, stop loading
+            });
+    }, []);
+
+    //   console.log(certificatesDb);
+
     const { id } = useParams();
     const imageRef = useRef(null);
 
-    // Sample certificate database - replace with your actual data
-    const certificatesDb = {
-        'TIFF20240608IN0000001': {
-            name: "Meet Vyas",
-            role: "Application Developer",
-            period: "Two months",
-            description: "Completed a two-month internship as an Application Developer at TIFFIN.",
-            issueDate: "2024",
-            image: "/certificates/TIFF20240608IN0000001.png"
-        },
-        'TIFF20240608IN0000002': {
-            name: "Ojas Kulkarni",
-            role: "Software Department Intern",
-            period: "Two months",
-            description: "Completed a two-month internship in the Software department at TIFFIN.",
-            issueDate: "2024",
-            image: "/certificates/TIFF20240608IN0000002.png"
-        },
-        'TIFF20240608IN0000012': {
-            name: "Srija Puvvadda",
-            role: "UI/UX Designer",
-            period: "Two months",
-            description: "Completed a two-month internship as a UI/UX Designer at TIFFIN.",
-            issueDate: "2025",
-            image: "/certificates/TIFF20240608IN0000012.png"
-        },
-        'TIFF20240608IN0000013': {
-            name: "Thiru Kumaran",
-            role: "UI/UX Designer",
-            period: "Two months",
-            description: "Completed a two-month internship as a UI/UX Designer at TIFFIN.",
-            issueDate: "2025",
-            image: "/certificates/TIFF20240608IN0000013.png"
-        },
-        'TIFF20240608IN0000014': {
-            name: "Kommareddy Sai Shiva Harshitha",
-            role: "Data Analytics Intern",
-            period: "Two months",
-            description: "Completed a two-month internship in the Data Analytics department at TIFFIN.",
-            issueDate: "2025",
-            image: "/certificates/TIFF20240608IN0000014.png"
-        },
-        'TIFF20240608IN0000015': {
-            name: "Sowmya Sarikonda",
-            role: "Data Analytics Intern",
-            period: "Two months",
-            description: "Completed a two-month internship in the Data Analytics department at TIFFIN.",
-            issueDate: "2025",
-            image: "/certificates/TIFF20240608IN0000015.png"
-        },
-        'TIFF20240608IN0000016': {
-            name: "Koshik SK",
-            role: "Web Developer",
-            period: "Two months",
-            description: "Completed a two-month internship as a Web Developer at TIFFIN.",
-            issueDate: "2025",
-            image: "/certificates/TIFF20240608IN0000016.png"
-        },
-        'TIFF20240608IN0000017': {
-            name: "Aryan Sharma",
-            role: "Web Developer",
-            period: "Two months",
-            description: "Completed a two-month internship as a Web Developer at TIFFIN.",
-            issueDate: "2025",
-            image: "/certificates/TIFF20240608IN0000017.png"
-        },
-        'TIFF20240608IN0000003': {
-            name: "Akshat Khanna",
-            role: "UI/UX Designer",
-            period: "Two months",
-            description: "Completed a two-month internship as a UI/UX Designer at TIFFIN.",
-            issueDate: "2024",
-            image: "/certificates/TIFF20240608IN0000003.png"
-        },
-        'TIFF20240608IN0000004': {
-            name: "Nakshatra Nambiar",
-            role: "UI/UX Designer",
-            period: "Two months",
-            description: "Completed a two-month internship as a UI/UX Designer at TIFFIN.",
-            issueDate: "2024",
-            image: "/certificates/TIFF20240608IN0000004.png"
-        },
-        'TIFF20240608IN0000005': {
-            name: "Safal A",
-            role: "UI/UX Designer",
-            period: "Two months",
-            description: "Completed a two-month internship as a UI/UX Designer at TIFFIN.",
-            issueDate: "2024",
-            image: "/certificates/TIFF20240608IN0000005.png"
-        },
-        'TIFF20240608IN0000006': {
-            name: "Tejaswini Chandrasekar",
-            role: "UI/UX Designer",
-            period: "Two months",
-            description: "Completed a two-month internship as a UI/UX Designer at TIFFIN.",
-            issueDate: "2024",
-            image: "/certificates/TIFF20240608IN0000006.png"
-        },
-        'TIFF20240608IN0000007': {
-            name: "Sanjana Giridhar",
-            role: "UI/UX Designer",
-            period: "Two months",
-            description: "Completed a two-month internship as a UI/UX Designer at TIFFIN.",
-            issueDate: "2024",
-            image: "/certificates/TIFF20240608IN0000007.png"
-        },
-        'TIFF20240608IN0000008': {
-            name: "JVN Ganesh",
-            role: "AI/ML Developer",
-            period: "Two months",
-            description: "Completed a two-month internship as an AI/ML Developer at TIFFIN.",
-            issueDate: "2024",
-            image: "/certificates/TIFF20240608IN0000008.png"
-        },
-        'TIFF20240608IN0000009': {
-            name: "Kavikkanan",
-            role: "Application Developer",
-            period: "Two months",
-            description: "Completed a two-month internship as an Application Developer at TIFFIN.",
-            issueDate: "2024",
-            image: "/certificates/TIFF20240608IN0000009.png"
-        },
-        'TIFF20240608IN0000010': {
-            name: "Anirudh",
-            role: "Application Developer",
-            period: "Two months",
-            description: "Completed a two-month internship as an Application Developer at TIFFIN.",
-            issueDate: "2024",
-            image: "/certificates/TIFF20240608IN0000010.png"
-        },
-        'TIFF20240608IN0000011': {
-            name: "Ayushi Sharma",
-            role: "Software Department Intern",
-            period: "Two months",
-            description: "Completed a two-month internship in the Software department at TIFFIN.",
-            issueDate: "2024",
-            image: "/certificates/TIFF20240608IN0000011.png"
-        }
-    };
 
     const certificate = certificatesDb[id];
+    if (loading) {
+        return <div className='h-[100vh] flex align-center justify-center'>Loading data...</div>;
+    }
 
     const handleShare = async () => {
         try {
