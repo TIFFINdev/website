@@ -7,6 +7,7 @@ import Download from "./components/Download";
 import Footer from "./components/Footer";
 import CertificateVerifier from "./components/CertificateVerifier";
 import CertificateViewer from "./components/CertificateViewer";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
               <BringToCity />
               <Download />
               <Footer />
+              <Analytics/>
             </div>
           }
         />
@@ -43,6 +45,7 @@ function App() {
               <Navbar />
               <CertificateVerifier />
               <Footer/>
+              <Analytics/>
             </>
           }
         />
@@ -53,6 +56,7 @@ function App() {
               <Navbar />
               <CertificateViewer />
               <Footer/>
+              <Analytics/>
             </>
           }
         />
