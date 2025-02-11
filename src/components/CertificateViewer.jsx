@@ -38,7 +38,7 @@ const CertificateViewer = () => {
             });
     }, []);
 
-    //   console.log(certificatesDb);
+      console.log(certificatesDb);
 
     const { id } = useParams();
     const imageRef = useRef(null);
