@@ -18,7 +18,7 @@ function App() {
           element={
             <div className="min-h-screen bg-white">
               <div
-                className="h-screen flex flex-col"
+                className="lg:h-screen flex flex-col"
                 style={{
                   backgroundImage: `url('/GROUP150.png')`,
                   backgroundSize: "cover",
